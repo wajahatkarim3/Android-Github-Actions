@@ -38,13 +38,14 @@ jobs:
       #    comment: ${{ github.event.head_commit.message }}
           
       - name: Distribute to AppCenter
-        uses: devussy/AppCenter-Distribute-Github-Action@v1.0.2
+        uses: wzieba/AppCenter-Github-Action@v1.3.2
         with:
-          app: wajahatkarim3/Android-Github-Actions
+          appName: wajahatkarim3/Android-Github-Actions
           token: ${{secrets.APP_CENTER_TOKEN}}
           group: public
           file: app/build/outputs/apk/debug/app-debug.apk
-          silent: false
+          debug: false
+          # silent: false
 
       - name: Send APK to Slack
         uses: adrey/slack-file-upload-action@1.0.5
