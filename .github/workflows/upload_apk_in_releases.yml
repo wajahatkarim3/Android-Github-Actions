@@ -1,4 +1,4 @@
-name: CI
+name: Upload APK in Releases
 on:
   pull_request:
     branches:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   apk:
-    name: Generate APK
+    name: Upload APK in Releases
     runs-on: ubuntu-18.04
 
     steps:
@@ -38,7 +38,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_RELEASE }}
         with:
           tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
+          release_name: Automatic Release
           draft: false
           prerelease: false
 
