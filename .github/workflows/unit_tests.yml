@@ -23,4 +23,4 @@ jobs:
         uses: gradle/wrapper-validation-action@v1
 
       - name: Run Unit tests
-        run: ./gradlew test --stacktrace
+        run: bash ./gradlew test --stacktrace
