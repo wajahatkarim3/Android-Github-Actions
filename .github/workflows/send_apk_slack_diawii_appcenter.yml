@@ -49,9 +49,19 @@ jobs:
       - name: Distribute to AppCenter
         uses: wzieba/AppCenter-Github-Action@v1.3.2
         with:
-          appName: wajahatkarim3/Android-Github-Actions
-          token: ${{secrets.APP_CENTER_TOKEN}}
+          appName: wajahatkarim3/Actions-Demo
+          token: ${{ secrets.APP_CENTER_TOKEN }}
           group: public
           file: app/build/outputs/apk/debug/app-debug.apk
           debug: false
           # silent: false:
+            
+      - name: Distribute to AppCenter 2
+        uses: wzieba/AppCenter-Github-Action@v1.3.2
+        with:
+          appName: wajahatkarim3/Actions-Demo
+          token: ${{ secrets.APP_CENTER_TOKEN }}
+          group: public
+          file: ./app/build/outputs/apk/debug/app-debug.apk
+          debug: false
+          # silent: false::  
