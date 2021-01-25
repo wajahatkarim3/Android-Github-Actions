@@ -36,16 +36,6 @@ jobs:
       #    token: ${{ secrets.DIAWI_TOKEN }}
       #    file: ./app/build/outputs/apk/debug/app-debug.apk
       #    comment: ${{ github.event.head_commit.message }}
-          
-      - name: Distribute to AppCenter
-        uses: wzieba/AppCenter-Github-Action@v1.3.2
-        with:
-          appName: wajahatkarim3/Android-Github-Actions
-          token: ${{secrets.APP_CENTER_TOKEN}}
-          group: public
-          file: ./app/build/outputs/apk/debug/app-debug.apk
-          debug: false
-          # silent: false
 
       - name: Send APK to Slack
         uses: adrey/slack-file-upload-action@1.0.5
@@ -55,3 +45,13 @@ jobs:
           channel: random
           filename: Github Actions App.apk
           initial_comment: ${{ github.event.head_commit.message }}
+          
+      - name: Distribute to AppCenter
+        uses: wzieba/AppCenter-Github-Action@v1.3.2
+        with:
+          appName: wajahatkarim3/Android-Github-Actions
+          token: ${{secrets.APP_CENTER_TOKEN}}
+          group: public
+          file: app/build/outputs/apk/debug/app-debug.apk
+          debug: false
+          # silent: false:
