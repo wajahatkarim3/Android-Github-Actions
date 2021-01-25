@@ -1,11 +1,8 @@
 name: Upload APK in Releases
 on:
-  pull_request:
-    branches:
-      - 'master'
   push:
-    tags:
-      - "*"
+    branches:
+      - 'main'
 
 jobs:
   apk:
