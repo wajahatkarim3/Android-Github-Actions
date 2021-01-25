@@ -34,7 +34,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_RELEASE }}
         with:
-          tag_name: ${{ github.ref }}
+          tag_name: newtag
           release_name: Automatic Release
           draft: false
           prerelease: false
