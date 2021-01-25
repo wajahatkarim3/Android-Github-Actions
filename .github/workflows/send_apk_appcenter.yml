@@ -1,0 +1,40 @@
+name: Send APK to Diawi
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+
+  apk:
+    name: Send APK to Diawi
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Grant Permission to Execute
+        run: chmod +x gradlew
+        
+      - name: Build debug APK
+        run: bash ./gradlew assembleDebug --stacktrace
+        
+      - name: Upload APK to Github Artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: app
+          path: app/build/outputs/apk/debug/app-debug.apk
+
+
+      - name: Distribute to AppCenter
+        uses: wzieba/AppCenter-Github-Action@v1.3.2
+        with:
+          appName: wajahatkarim3/Actions-Demo
+          token: ${{ secrets.APP_CENTER_TOKEN }}
+          group: public
+          file: app/build/outputs/apk/debug/app-debug.apk
+          debug: false

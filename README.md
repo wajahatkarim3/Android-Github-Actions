@@ -9,6 +9,17 @@ An sample image gallery app utilizing Unsplash API to play with Github Actions f
 </div>
 <br/>
 
+## Github Actions
+
+* Run Unit Tests - [Check unit_tests.yml](https://github.com/wajahatkarim3/Android-Github-Actions/blob/main/.github/workflows/unit_tests.yml)
+* Generate APK and upload on Github Artifacts - [Check apk_generate.yml](https://github.com/wajahatkarim3/Android-Github-Actions/blob/main/.github/workflows/apk_generate.yml)
+* Upload APK in Github Release - [Check upload_apk_in_releases.yml](https://github.com/wajahatkarim3/Android-Github-Actions/blob/main/.github/workflows/upload_apk_in_releases.yml)
+* Send APK on Slack - [Check send_apk_slack.yml](https://github.com/wajahatkarim3/Android-Github-Actions/blob/main/.github/workflows/send_apk_slack.yml)
+* Send APK to AppCenter Distribution - [Check send_apk_appcenter.yml](https://github.com/wajahatkarim3/Android-Github-Actions/blob/main/.github/workflows/send_apk_appcenter.yml)
+* Send APK to Diawi - [Check send_apk_diawi.yml](https://github.com/wajahatkarim3/Android-Github-Actions/blob/main/.github/workflows/send_apk_diawi.yml)
+
+## Screenshots
+
 <div align="center">
   <img src="https://github.com/wajahatkarim3/Android-Github-Actions/blob/main/screenshots/PopularPhotosDay.png" width="230px" />  <img src="https://github.com/wajahatkarim3/Android-Github-Actions/blob/main/screenshots/PhotoDetailsDay.png" width="230px" />  <img src="https://github.com/wajahatkarim3/Android-Github-Actions/blob/main/screenshots/SearchResultsDay.png" width="230px" /><br>
   <img src="https://github.com/wajahatkarim3/Android-Github-Actions/blob/main/screenshots/PopularPhotosNight.png" width="230px" />  <img src="https://github.com/wajahatkarim3/Android-Github-Actions/blob/main/screenshots/PhotoDetailsNight.png" width="230px" />  <img src="https://github.com/wajahatkarim3/Android-Github-Actions/blob/main/screenshots/SearchResultsNight.png" width="230px" />

@@ -1,0 +1,37 @@
+name: Send APK to Diawii
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+
+  apk:
+    name: Send APK to Diawii
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Grant Permission to Execute
+        run: chmod +x gradlew
+        
+      - name: Build debug APK
+        run: bash ./gradlew assembleDebug --stacktrace
+        
+      - name: Upload APK to Github Artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: app
+          path: app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Upload APK to Diawii
+        uses: rnkdsh/action-upload-diawi@v1.1.0
+        with:
+          token: ${{ secrets.DIAWI_TOKEN }}
+          file: ./app/build/outputs/apk/debug/app-debug.apk
+          comment: ${{ github.event.head_commit.message }}
