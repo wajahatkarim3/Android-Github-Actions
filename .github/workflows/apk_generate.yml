@@ -4,6 +4,10 @@ on:
     branches: [ main ]
     
 jobs:
+  # Run Unit Tests etc before Generating APK here.
+  # ....
+    
+  # A job to generate debug APK and upload on Github Artifacts
   apk:
       name: Generate APK
       runs-on: ubuntu-18.04
