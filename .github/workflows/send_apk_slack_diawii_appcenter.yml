@@ -43,7 +43,7 @@ jobs:
           appName: wajahatkarim3/Android-Github-Actions
           token: ${{secrets.APP_CENTER_TOKEN}}
           group: public
-          file: app/build/outputs/apk/debug/app-debug.apk
+          file: ./app/build/outputs/apk/debug/app-debug.apk
           debug: false
           # silent: false
 
