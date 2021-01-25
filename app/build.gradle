@@ -5,9 +5,6 @@ plugins {
     id 'kotlin-android-extensions'
 }
 
-def localProperties = new Properties()
-localProperties.load(new FileInputStream(rootProject.file("local.properties")))
-
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -20,8 +17,6 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-        buildConfigField "String", "UNSPLASH_API_KEY", localProperties['apiKey']
     }
 
     buildTypes {
