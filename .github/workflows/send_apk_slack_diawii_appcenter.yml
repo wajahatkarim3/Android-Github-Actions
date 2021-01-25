@@ -23,11 +23,11 @@ jobs:
       - name: Build debug APK
         run: bash ./gradlew assembleDebug --stacktrace
         
-      #- name: Upload APK to Github Artifacts
-      #  uses: actions/upload-artifact@v1
-      #  with:
-      #    name: app
-      #    path: app/build/outputs/apk/debug/app-debug.apk
+      - name: Upload APK to Github Artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: app
+          path: app/build/outputs/apk/debug/app-debug.apk
 
 
       #- name: Upload APK to Diawii
