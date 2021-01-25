@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Imagine</string>
+
+    <!-- Screen Titles -->
+    <string name="screen_home_title_str">Home</string>
+    <string name="screen_photo_details_title_str">Photo Details</string>
+
+    <!-- Text Hints -->
+    <string name="hint_search_photos_text_str">Search photos</string>
+
+    <!-- Others -->
+    <string name="label_explore_text_str">Explore</string>
+    <string name="label_popular_text_str">Popular</string>
+    <string name="message_load_photos_str">Loading more photos...</string>
+    <string name="action_retry_str">Retry</string>
+    <string name="message_no_network_connected_str">No network connected!</string>
+    <string name="message_something_went_wrong_str">Something went wrong!</string>
+    <string name="message_search_results_for_str">Search results for %1s</string>
+
+</resources>
