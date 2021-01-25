@@ -1,4 +1,4 @@
-name: Send APK to Diawi
+name: Send APK to AppCenter
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
 jobs:
 
   apk:
-    name: Send APK to Diawi
+    name: Send APK to AppCenter
     runs-on: ubuntu-18.04
 
     steps:
