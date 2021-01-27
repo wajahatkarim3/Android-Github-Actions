@@ -6,6 +6,8 @@ An sample image gallery app utilizing Unsplash API to play with Github Actions f
   <a href="https://twitter.com/WajahatKarim">Wajahat Karim</a>
 </div>
 <br/>
+  
+- This demo was showcased in a talk live by DSC IBA Karachi.
 
 ## Github Actions
 
