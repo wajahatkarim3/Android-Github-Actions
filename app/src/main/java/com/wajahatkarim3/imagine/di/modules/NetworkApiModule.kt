@@ -27,8 +27,8 @@ class NetworkApiModule {
 
         return OkHttpClient.Builder()
             .addInterceptor { chain ->
-                var request = chain.request()
-                var newRequest = request.newBuilder().header("Authorization", AppConstants.API.API_KEY)
+                val request = chain.request()
+                val newRequest = request.newBuilder().header("Authorization", AppConstants.API.API_KEY)
                 chain.proceed(newRequest.build())
             }
             .addInterceptor(logging)
