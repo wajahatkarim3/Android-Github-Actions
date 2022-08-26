@@ -59,13 +59,13 @@ class HomeViewModel @Inject constructor(
                         if (page == 1) {
                             // First page
                             _uiState.postValue(ContentState)
-                            _photosList.postValue(it.data!!)
+                            _photosList.postValue(it.data)
                         } else {
                             // Any other page
                             _uiState.postValue(ContentNextPageState)
                             val currentList = arrayListOf<PhotoModel>()
                             _photosList.value?.let { pl -> currentList.addAll(pl) }
-                            currentList.addAll(it.data!!)
+                            currentList.addAll(it.data)
                             _photosList.postValue(currentList)
                         }
                     }
