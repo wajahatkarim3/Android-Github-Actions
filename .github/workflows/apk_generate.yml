@@ -6,11 +6,11 @@ on:
 jobs:
   # Run Unit Tests etc before Generating APK here.
   # ....
-    
+  
   # A job to generate debug APK and upload on Github Artifacts
   apk:
       name: Generate APK
-      runs-on: ubuntu-18.04
+      runs-on: ubuntu-latest
 
       steps:
         - uses: actions/checkout@v3
