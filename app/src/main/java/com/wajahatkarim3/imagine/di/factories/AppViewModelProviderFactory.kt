@@ -10,8 +10,9 @@ import javax.inject.Singleton
  * The Singleton ViewModelFactory to provide any kind of ViewModels used throughout the app
  */
 @Singleton
-class AppViewModelProviderFactory @Inject constructor(val viewModelsMap: Map<Class<out ViewModel>, @JvmSuppressWildcards Provider<ViewModel>> ) : ViewModelProvider.NewInstanceFactory() {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+class AppViewModelProviderFactory @Inject constructor(val viewModelsMap: Map<Class<out ViewModel>, @JvmSuppressWildcards Provider<ViewModel>>) :
+    ViewModelProvider.NewInstanceFactory() {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         val creator = viewModelsMap[modelClass] ?: viewModelsMap.asIterable().firstOrNull {
             modelClass.isAssignableFrom(it.key)
         }?.value ?: throw IllegalStateException("Coudln't create ViewModel for $modelClass")
@@ -22,4 +23,5 @@ class AppViewModelProviderFactory @Inject constructor(val viewModelsMap: Map<Cla
             throw RuntimeException(exception)
         }
     }
+
 }

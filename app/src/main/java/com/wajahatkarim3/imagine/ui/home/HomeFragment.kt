@@ -69,10 +69,10 @@ class HomeFragment : BaseFragment() {
 
             // Photos RecyclerView
             photosAdapter = PhotosAdapter() { photo, position ->
-                var bundle = bundleOf("photo" to photo)
+                val bundle = bundleOf("photo" to photo)
                 findNavController().navigate(R.id.action_homeFragment_to_photoDetailsFragment, bundle)
             }
-            photosAdapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
+//            photosAdapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
             bi.recyclerPopularPhotos.adapter = photosAdapter
 
             // NestedScrollView
@@ -135,6 +135,7 @@ class HomeFragment : BaseFragment() {
                         viewModel.retry()
                     }
                 }
+                else -> {}
             }
         }
 
